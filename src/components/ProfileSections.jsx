@@ -2,6 +2,36 @@ import { useLanguage } from './LanguageProvider'
 
 function ProfileSections({ profileData }) {
   const { labels, isEnglish } = useLanguage()
+  const programmingIcons = [
+    {
+      name: 'HTML',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    },
+    {
+      name: 'CSS',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    },
+    {
+      name: 'JavaScript',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    },
+    {
+      name: 'Python',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    },
+    {
+      name: 'SQL',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    },
+    {
+      name: 'C#',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
+    },
+    {
+      name: 'Bash',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
+    },
+  ]
 
   return (
     <div className="case-grid">
@@ -18,11 +48,14 @@ function ProfileSections({ profileData }) {
       <section className="neon-card">
         <h2 className="section-title">{labels.programming}</h2>
         <div className="section-divider" />
-        <ul className="list-divider">
-          {profileData.programming.map((item) => (
-            <li key={item}>{item}</li>
+        <div className="icon-grid">
+          {programmingIcons.map((icon) => (
+            <div className="icon-card" key={icon.name}>
+              <img src={icon.url} alt={icon.name} loading="lazy" />
+              <span>{icon.name}</span>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className="neon-card">

@@ -1,4 +1,5 @@
 import { useLanguage } from './LanguageProvider'
+import cvFile from '../assets/Lienhard_Léo_CV.pdf'
 
 function ProfileHero({ profileData, profilePhoto }) {
   const { labels, isEnglish } = useLanguage()
@@ -38,6 +39,9 @@ function ProfileHero({ profileData, profilePhoto }) {
             />
           </svg>
           <span>LinkedIn</span>
+        </a>
+        <a className="social-link" href={cvFile} download>
+          <span>CV</span>
         </a>
       </div>
       <div className="neon-card">

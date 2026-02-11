@@ -13,7 +13,7 @@ function Profile() {
       <p className="page-intro">
         {isEnglish
           ? 'Epitech student with a curious mindset, I enjoy building and exploring across the stack.'
-          : 'Etudiant a Epitech, curieux et polyvalent, j aime construire et explorer sur tout le stack.'}
+          : "Étudiant à Epitech, curieux et polyvalent, j'aime construire et explorer sur toute la stack."}
       </p>
       <ProfileHero profileData={profileData} profilePhoto={profilePhoto} />
       <ProfileSections profileData={profileData} />
