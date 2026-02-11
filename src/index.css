@@ -267,6 +267,16 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.section-span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 720px) {
+  .section-span-2 {
+    grid-column: span 1;
+  }
+}
+
 .case {
   border-radius: 16px;
   border: 1px solid rgba(255, 228, 92, 0.4);

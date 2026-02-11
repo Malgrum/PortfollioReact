@@ -16,6 +16,14 @@ function ProfileSections({ profileData }) {
       url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
     },
     {
+      name: 'React',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    },
+    {
+      name: 'Tailwind',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+    },
+    {
       name: 'Python',
       url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
     },
@@ -24,12 +32,24 @@ function ProfileSections({ profileData }) {
       url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
     },
     {
+      name: 'PHP',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+    },
+    {
       name: 'C#',
       url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
     },
     {
+      name: 'Godot',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg',
+    },
+    {
       name: 'Bash',
       url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
+    },
+    {
+      name: 'Google Suite',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
     },
   ]
 
@@ -45,7 +65,7 @@ function ProfileSections({ profileData }) {
         </ul>
       </section>
 
-      <section className="neon-card">
+      <section className="neon-card section-span-2">
         <h2 className="section-title">{labels.programming}</h2>
         <div className="section-divider" />
         <div className="icon-grid">
@@ -56,16 +76,6 @@ function ProfileSections({ profileData }) {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="neon-card">
-        <h2 className="section-title">{labels.experience}</h2>
-        <div className="section-divider" />
-        <ul className="list-divider">
-          {(isEnglish ? profileData.experience.en : profileData.experience.fr).map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
       </section>
 
       <section className="neon-card">
@@ -83,6 +93,16 @@ function ProfileSections({ profileData }) {
         <div className="section-divider" />
         <ul className="list-divider">
           {(isEnglish ? profileData.hobbies.en : profileData.hobbies.fr).map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="neon-card">
+        <h2 className="section-title">{labels.experience}</h2>
+        <div className="section-divider" />
+        <ul className="list-divider">
+          {(isEnglish ? profileData.experience.en : profileData.experience.fr).map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
