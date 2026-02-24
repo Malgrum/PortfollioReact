@@ -244,6 +244,25 @@ a {
   filter: drop-shadow(0 0 6px rgba(255, 228, 92, 0.4));
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 228, 92, 0.4);
+  background: rgba(12, 12, 18, 0.6);
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 12px rgba(255, 228, 92, 0.2), 0 0 16px rgba(255, 94, 180, 0.18);
+}
+
 .profile-photo {
   width: clamp(92px, 12vw, 128px);
   height: clamp(92px, 12vw, 128px);

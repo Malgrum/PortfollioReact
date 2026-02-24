@@ -1,56 +1,38 @@
 import { useLanguage } from './LanguageProvider'
+import htmlIcon from '../assets/icons/html5-original.svg'
+import cssIcon from '../assets/icons/css3-original.svg'
+import javascriptIcon from '../assets/icons/javascript-original.svg'
+import reactIcon from '../assets/icons/react-original.svg'
+import tailwindIcon from '../assets/icons/tailwindcss-original.svg'
+import pythonIcon from '../assets/icons/python-original.svg'
+import sqlIcon from '../assets/icons/mysql-original.svg'
+import phpIcon from '../assets/icons/php-original.svg'
+import csharpIcon from '../assets/icons/csharp-original.svg'
+import godotIcon from '../assets/icons/godot-original.svg'
+import bashIcon from '../assets/icons/bash-original.svg'
+import googleIcon from '../assets/icons/google-original.svg'
 
 function ProfileSections({ profileData }) {
   const { labels, isEnglish } = useLanguage()
   const programmingIcons = [
-    {
-      name: 'HTML',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-    },
-    {
-      name: 'CSS',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-    },
-    {
-      name: 'JavaScript',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-    },
-    {
-      name: 'React',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    },
-    {
-      name: 'Tailwind',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
-    },
-    {
-      name: 'Python',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    },
-    {
-      name: 'SQL',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-    },
-    {
-      name: 'PHP',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
-    },
-    {
-      name: 'C#',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-    },
-    {
-      name: 'Godot',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg',
-    },
-    {
-      name: 'Bash',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
-    },
-    {
-      name: 'Google Suite',
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
-    },
+    { name: 'HTML', src: htmlIcon },
+    { name: 'CSS', src: cssIcon },
+    { name: 'JavaScript', src: javascriptIcon },
+    { name: 'React', src: reactIcon },
+    { name: 'Tailwind', src: tailwindIcon },
+    { name: 'Python', src: pythonIcon },
+    { name: 'SQL', src: sqlIcon },
+    { name: 'PHP', src: phpIcon },
+    { name: 'C#', src: csharpIcon },
+    { name: 'Godot', src: godotIcon },
+    { name: 'Bash', src: bashIcon },
+    { name: 'Google Suite', src: googleIcon },
+  ]
+  const galleryItems = [
+    { fr: 'Impression PLA', en: 'PLA Printing' },
+    { fr: 'Impression Résine', en: 'Resin Printing' },
+    { fr: 'Logiciel', en: 'Software' },
+    { fr: 'Site', en: 'Website' },
   ]
 
   return (
@@ -71,8 +53,20 @@ function ProfileSections({ profileData }) {
         <div className="icon-grid">
           {programmingIcons.map((icon) => (
             <div className="icon-card" key={icon.name}>
-              <img src={icon.url} alt={icon.name} loading="lazy" />
+              <img src={icon.src} alt={icon.name} loading="lazy" />
               <span>{icon.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="neon-card">
+        <h2 className="section-title">{labels.gallery}</h2>
+        <div className="section-divider" />
+        <div className="gallery-grid">
+          {galleryItems.map((item) => (
+            <div className="gallery-item" key={item.fr}>
+              {isEnglish ? item.en : item.fr}
             </div>
           ))}
         </div>

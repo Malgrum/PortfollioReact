@@ -18,12 +18,14 @@ export function LanguageProvider({ children }) {
 
   const labels = useMemo(
     () => ({
+      home: isEnglish ? 'Home' : 'Accueil',
       profile: isEnglish ? 'Profile' : 'Profil',
       projects: isEnglish ? 'Projects' : 'Projects',
       projectsTitle: isEnglish ? 'My Projects' : 'Mes Projets',
       contact: 'Contact',
       skills: isEnglish ? 'Skills' : 'Compétences',
       programming: isEnglish ? 'Programming' : 'Programmation',
+      gallery: isEnglish ? 'Gallery' : 'Galerie',
       experience: isEnglish ? 'Professional Experience' : 'Expérience Professionnelle',
       associative: isEnglish ? 'Associative' : 'Associative',
       hobbies: isEnglish ? 'Hobbies' : 'Hobbies',

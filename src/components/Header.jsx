@@ -8,6 +8,9 @@ function Header() {
   return (
     <nav>
       <NavLink className={linkClass} to="/">
+        {labels.home}
+      </NavLink>
+      <NavLink className={linkClass} to="/profile">
         {labels.profile}
       </NavLink>
       <NavLink className={linkClass} to="/projects">
