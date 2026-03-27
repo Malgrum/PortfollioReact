@@ -16,6 +16,9 @@ function Header() {
       <NavLink className={linkClass} to="/projects">
         {labels.projects}
       </NavLink>
+      <NavLink className={linkClass} to="/gallery">
+        {labels.gallery}
+      </NavLink>
       <NavLink className={linkClass} to="/contact">
         {labels.contact}
       </NavLink>
