@@ -25,7 +25,6 @@ function ContactSection() {
       setIsSending(true)
       emailjs.init(publicKey)
       await emailjs.sendForm(serviceId, templateId, formRef.current)
-      alert(labels.sentSuccess)
       formRef.current?.reset()
     } catch (error) {
       console.error('EmailJS Error:', error)
