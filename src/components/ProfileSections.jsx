@@ -28,12 +28,6 @@ function ProfileSections({ profileData }) {
     { name: 'Bash', src: bashIcon },
     { name: 'Google Suite', src: googleIcon },
   ]
-  const galleryItems = [
-    { fr: 'Impression PLA', en: 'PLA Printing' },
-    { fr: 'Impression Résine', en: 'Resin Printing' },
-    { fr: 'Logiciel', en: 'Software' },
-    { fr: 'Site', en: 'Website' },
-  ]
 
   return (
     <div className="case-grid">
@@ -55,18 +49,6 @@ function ProfileSections({ profileData }) {
             <div className="icon-card" key={icon.name}>
               <img src={icon.src} alt={icon.name} loading="lazy" />
               <span>{icon.name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="neon-card">
-        <h2 className="section-title">{labels.gallery}</h2>
-        <div className="section-divider" />
-        <div className="gallery-grid">
-          {galleryItems.map((item) => (
-            <div className="gallery-item" key={item.fr}>
-              {isEnglish ? item.en : item.fr}
             </div>
           ))}
         </div>
