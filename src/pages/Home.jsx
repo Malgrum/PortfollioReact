@@ -21,10 +21,6 @@ function Home() {
           <div className="case-title">{labels.projects}</div>
           <p>{isEnglish ? 'Selected work and builds.' : 'Travaux et realisations.'}</p>
         </Link>
-        <Link className="case" to="/contact">
-          <div className="case-title">{labels.contact}</div>
-          <p>{isEnglish ? 'Get in touch.' : 'Echangeons ensemble.'}</p>
-        </Link>
       </div>
     </section>
   )
