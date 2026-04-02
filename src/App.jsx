@@ -6,6 +6,8 @@ import Gallery from './pages/Gallery'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
 import Projects from './pages/Projects'
+import Contact from './pages/Contact'
+import Gallery from './pages/Gallery'
 
 function App() {
   return (
