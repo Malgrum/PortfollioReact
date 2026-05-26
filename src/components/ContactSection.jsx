@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
 import { useLanguage } from './LanguageProvider'
 
 function ContactSection() {
@@ -11,23 +10,53 @@ function ContactSection() {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-    
+    const webhook = import.meta.env.VITE_DISCORD_WEBHOOK_URL
 
-    if (!publicKey || !serviceId || !templateId) {
-      alert(labels.missingConfig)
+    if (!webhook) {
+      alert('Discord webhook not configured. Set VITE_DISCORD_WEBHOOK_URL in your .env')
       return
+    }
+
+    const form = formRef.current
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
+
+    // Build a compact embed for Discord
+    const embed = {
+      title: wantsOrder ? 'New order request' : 'New contact message',
+      fields: [
+        { name: 'Name', value: data.from_name || '—', inline: true },
+        { name: 'Email', value: data.reply_to || '—', inline: true },
+        ...(wantsOrder
+          ? [
+              { name: 'Order type', value: data.order_type || '—', inline: true },
+              { name: 'Budget', value: data.budget || '—', inline: true },
+            ]
+          : []),
+      ],
+      description: data.message || 'No message provided',
+      timestamp: new Date().toISOString(),
     }
 
     try {
       setIsSending(true)
-      emailjs.init(publicKey)
-      await emailjs.sendForm(serviceId, templateId, formRef.current)
-      formRef.current?.reset()
+      const res = await fetch(webhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ embeds: [embed] }),
+      })
+
+      if (!res.ok) {
+        const text = await res.text()
+        console.error('Webhook error', res.status, text)
+        alert(labels.sentError)
+        return
+      }
+
+      form.reset()
+      alert(labels.sentSuccess)
     } catch (error) {
-      console.error('EmailJS Error:', error)
+      console.error('Webhook Error:', error)
       alert(labels.sentError)
     } finally {
       setIsSending(false)
