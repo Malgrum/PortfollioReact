@@ -5,7 +5,7 @@ import { useLanguage } from '../components/LanguageProvider'
 
 import casque from '../assets/gallerie/3D/Casque.jpg'
 import kinger from '../assets/gallerie/3D/Kinger.jpg'
-import gk4 from '../assets/gallerie/Code/GK4.png'
+import gk4 from '../assets/gallerie/Code/Caisse.png'
 import ritualis from '../assets/gallerie/Code/Ritualis.png'
 
 const galleryGroups = {
