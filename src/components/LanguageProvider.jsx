@@ -20,7 +20,7 @@ export function LanguageProvider({ children }) {
     () => ({
       home: isEnglish ? 'Home' : 'Accueil',
       profile: isEnglish ? 'Profile' : 'Profil',
-      projects: isEnglish ? 'Projects' : 'Projects',
+      projects: isEnglish ? 'Projects' : 'Projets',
       projectsTitle: isEnglish ? 'My Projects' : 'Mes Projets',
       contact: 'Contact',
       skills: isEnglish ? 'Skills' : 'Compétences',

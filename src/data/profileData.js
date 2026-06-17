@@ -1,7 +1,7 @@
 const profileData = {
   firstName: 'Léo',
   lastName: 'Lienhard',
-  age: '22',
+  age: '23',
   skills: {
     fr: ['Permis B', "Esprit d'équipe", 'Dynamique'],
     en: ["Driver's License B", 'Team Spirit', 'Dynamic'],
