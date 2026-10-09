@@ -6,7 +6,6 @@ const profileData = {
     fr: ['Permis B', "Esprit d'équipe", 'Dynamique'],
     en: ["Driver's License B", 'Team Spirit', 'Dynamic'],
   },
-  programming: ['HTML / CSS / JavaScript', 'Python / SQL / C# / Bash'],
   experience: {
     fr: ['Unistra - Agent d\'accueil (2023)', 'Auchan - Agent rayon (2024)', 'KFC (2025 - Maintenant)'],
     en: ['Unistra - Front desk agent (2023)', 'Auchan - Store associate (2024)', 'KFC (2025 - Now)'],
