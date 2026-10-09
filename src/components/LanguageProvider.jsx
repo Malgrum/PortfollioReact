@@ -26,6 +26,7 @@ export function LanguageProvider({ children }) {
       contact: 'Contact',
       skills: isEnglish ? 'Skills' : 'Compétences',
       programming: isEnglish ? 'Programming' : 'Programmation',
+      logiciel: isEnglish ? 'Software' : 'Logiciel',
       gallery: isEnglish ? 'Gallery' : 'Galerie',
       experience: isEnglish ? 'Professional Experience' : 'Expérience Professionnelle',
       associative: isEnglish ? 'Associative' : 'Associative',

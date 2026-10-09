@@ -6,11 +6,13 @@ import reactIcon from '../assets/icons/react-original.svg'
 import tailwindIcon from '../assets/icons/tailwindcss-original.svg'
 import pythonIcon from '../assets/icons/python-original.svg'
 import sqlIcon from '../assets/icons/mysql-original.svg'
-import phpIcon from '../assets/icons/php-original.svg'
 import csharpIcon from '../assets/icons/csharp-original.svg'
 import godotIcon from '../assets/icons/godot-original.svg'
 import bashIcon from '../assets/icons/bash-original.svg'
 import googleIcon from '../assets/icons/google-original.svg'
+import davinciIcon from '../assets/icons/DaVinci.svg'
+import arduinoIcon from '../assets/icons/Arduino.svg'
+import audacityIcon from '../assets/icons/Audacity.svg'
 
 function ProfileSections({ profileData }) {
   const { labels, isEnglish } = useLanguage()
@@ -22,10 +24,14 @@ function ProfileSections({ profileData }) {
     { name: 'Tailwind', src: tailwindIcon },
     { name: 'Python', src: pythonIcon },
     { name: 'SQL', src: sqlIcon },
-    { name: 'PHP', src: phpIcon },
     { name: 'C#', src: csharpIcon },
     { name: 'Godot', src: godotIcon },
     { name: 'Bash', src: bashIcon },
+  ]
+  const softwareIcons = [
+    { name: 'DaVinci', src: davinciIcon },
+    { name: 'Audacity', src: audacityIcon },
+    { name: 'Arduino', src: arduinoIcon },
     { name: 'Google Suite', src: googleIcon },
   ]
 
@@ -46,6 +52,19 @@ function ProfileSections({ profileData }) {
         <div className="section-divider" />
         <div className="icon-grid">
           {programmingIcons.map((icon) => (
+            <div className="icon-card" key={icon.name}>
+              <img src={icon.src} alt={icon.name} loading="lazy" />
+              <span>{icon.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='neon-card'>
+        <h2 className="section-title">{labels.logiciel}</h2>
+        <div className="section-divider" />
+        <div className="icon-grid">
+          {softwareIcons.map((icon) => (
             <div className="icon-card" key={icon.name}>
               <img src={icon.src} alt={icon.name} loading="lazy" />
               <span>{icon.name}</span>
