@@ -9,7 +9,9 @@ function ProjectsSection({ projects }) {
       <div className="project-list">
         {projects.map((project) => (
           <article key={project.title} className="project-card">
-            <h3 className="section-title">{project.title}</h3>
+            <h3 className="section-title">
+              {labels.project}: {project.title}
+            </h3>
             <p>{isEnglish ? project.en : project.fr}</p>
           </article>
         ))}
