@@ -12,16 +12,18 @@ const profileData = {
   },
   associative: {
     fr: [
+      "L'ANTRE - Association de loisir d'Epitech (2026-actuel)",
       "AIUS - Amicale des informaticiens de l'université de Strasbourg (2022-2024)",
       'Unigames - Esport Strasbourg (2023-2025)',
       'Festivale Décibulles (2023, 2024, 2025)',
-      'Warhagine (2025)',
+      'Warhagine - Club Warhammer (2025 - actuel)',
     ],
     en: [
+      "L'ANTRE - Epitech Recreation Association (2026-Now)",
       'AIUS - Informatics Club of the University of Strasbourg (2022-2024)',
       'Unigames - Esport Strasbourg (2023-2025)',
       'Festivale Décibulles (2023, 2024, 2025)',
-      'Warhagine (2025)',
+      'Warhagine - Warhammer Club (2025 - Now)',
     ],
   },
   hobbies: {
