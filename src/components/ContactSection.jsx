@@ -3,6 +3,7 @@ import { useLanguage } from './LanguageProvider'
 
 function ContactSection() {
   const { labels } = useLanguage()
+  const { orderOptions } = labels
   const formRef = useRef(null)
   const [isSending, setIsSending] = useState(false)
   const [wantsOrder, setWantsOrder] = useState(false)
@@ -87,10 +88,9 @@ function ContactSection() {
                     <option value="" disabled>
                       {labels.orderPlaceholder}
                     </option>
-                    <option value="Impression PLA">Impression PLA</option>
-                    <option value="Impression Resine">Impression Resine</option>
-                    <option value="Logiciel">Logiciel</option>
-                    <option value="Site">Site</option>
+                    <option value={orderOptions.pla}>{orderOptions.pla}</option>
+                    <option value={orderOptions.software}>{orderOptions.software}</option>
+                    <option value={orderOptions.website}>{orderOptions.website}</option>
                   </select>
                 </div>
                 <div className="form-row">

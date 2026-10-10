@@ -46,6 +46,17 @@ export function LanguageProvider({ children }) {
       orderType: isEnglish ? 'Order type' : 'Type de commande',
       orderBudget: isEnglish ? 'Budget' : 'Budget',
       orderPlaceholder: isEnglish ? 'Select a service' : 'Choisir un service',
+      orderOptions: isEnglish
+        ?         {
+          pla: 'PLA printing',
+          software: 'Software',
+          website: 'Website',
+        }
+        : {
+          pla: 'Impression PLA',
+          software: 'Logiciel',
+          website: 'Site',
+        },
       budgetPlaceholder: isEnglish ? 'Estimated budget' : 'Budget estime',
       sentSuccess: isEnglish
         ? 'Message Sent! I will get back to you soon.'
