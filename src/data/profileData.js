@@ -7,8 +7,8 @@ const profileData = {
     en: ["Driver's License B", 'Team Spirit', 'Dynamic'],
   },
   experience: {
-    fr: ['Unistra - Agent d\'accueil (2023)', 'Auchan - Agent rayon (2024)', 'KFC (2025 - Maintenant)'],
-    en: ['Unistra - Front desk agent (2023)', 'Auchan - Store associate (2024)', 'KFC (2025 - Now)'],
+    fr: ['Unistra - Agent d\'accueil (2023)', 'Auchan - Agent rayon (2024)', 'KFC (Novembre 2024 - Avril 2026)'],
+    en: ['Unistra - Front desk agent (2023)', 'Auchan - Store associate (2024)', 'KFC (November 2024 - April 2026)'],
   },
   associative: {
     fr: [
