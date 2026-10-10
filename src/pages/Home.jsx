@@ -10,7 +10,7 @@ function Home() {
       <p className="page-intro">
         {isEnglish
           ? 'Welcome to my neon portfolio. Explore my profile, projects, and contact me for collaborations.'
-          : 'Bienvenue sur mon portfolio neon. Decouvre mon profil, mes projets et contacte-moi pour collaborer.'}
+          : 'Bienvenue sur mon portfolio neon. Découvre mon profil, mes projets et contacte-moi pour collaborer.'}
       </p>
       <div className="case-grid" style={{ marginTop: '20px' }}>
         <Link className="case" to="/profile">
