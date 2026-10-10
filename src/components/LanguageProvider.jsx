@@ -49,7 +49,7 @@ export function LanguageProvider({ children }) {
       budgetPlaceholder: isEnglish ? 'Estimated budget' : 'Budget estime',
       sentSuccess: isEnglish
         ? 'Message Sent! I will get back to you soon.'
-        : 'Message Envoyé ! Je reviens vers toi vite.',
+        : 'Message Envoyé ! Je reviens vite vers toi.',
       sentError: isEnglish ? 'Error... Please try again later.' : "Erreur lors de l'envoi... réessaie plus tard.",
       missingConfig: isEnglish
         ? 'EmailJS is not configured yet. Please add your keys.'
