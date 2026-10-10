@@ -9,8 +9,8 @@ function Home() {
       <h1 className="page-title">{labels.home}</h1>
       <p className="page-intro">
         {isEnglish
-          ? 'Welcome to my neon portfolio. Explore my profile, projects, and contact me for collaborations.'
-          : 'Bienvenue sur mon portfolio neon. Découvre mon profil, mes projets et contacte-moi pour collaborer.'}
+          ? 'Welcome to my react portfolio. Explore my profile, projects, and contact me for collaborations.'
+          : 'Bienvenue sur mon portfolio react. Découvre mon profil, mes projets et contacte-moi pour collaborer.'}
       </p>
       <div className="case-grid" style={{ marginTop: '20px' }}>
         <Link className="case" to="/profile">
